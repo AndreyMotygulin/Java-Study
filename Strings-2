@@ -1,0 +1,8 @@
+
+
+
+ArrayList <char> charSequence = new ArrayList <char> ();
+int i = 0
+while (scanner.hasNext())
+charSequence[i] = scanner.next(); 
+i++
