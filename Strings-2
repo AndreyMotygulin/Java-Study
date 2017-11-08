@@ -1,11 +1,20 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String string = scanner.nextLine();
 
-
-ArrayList <char> charSequence = new ArrayList <char> ();
-int i = 0
-while (scanner.hasNext())
-charSequence[i] = scanner.next(); 
-i++
-
-if (string.contains(charSequence))
-  
+        System.out.print("Enter a char sequence: ");
+        ArrayList <char> charSequence = new ArrayList <char> ();
+        int i = 0
+        while (scanner.hasNext()) {
+          charSequence[i] = scanner.next(); 
+          i++;
+        };
+        
+        
+        if (string.contains(charSequence))
+          System.out.println("Specified char sequence is contained at the string");
