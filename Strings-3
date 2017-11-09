@@ -11,8 +11,7 @@ public class Main {
     String secondName = scan.nextLine();
     System.out.print("\nEnter your surname name: ");
     String surname = scan.nextLine();
-    
-    System.out.printf("\nYour initials are: %s.%s.", firstName.charAt(0), 
-            secondName.charAt(0)); // needs to add upperCase method
+    System.out.printf("\nYour initials are: %s.%s.", firstName.toUpperCase().charAt(0), 
+      secondName.toUpperCase().charAt(0));
   }
 }
