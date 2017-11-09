@@ -4,7 +4,7 @@ public class Main {
   
   public static void main(String[] args) 
   {
-    Scanner scan = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in); // needs to include exception handlers
     System.out.print("Enter your first name: ");
     String firstName = scan.nextLine();
     System.out.print("\nEnter your second name: ");
@@ -13,6 +13,6 @@ public class Main {
     String surname = scan.nextLine();
     
     System.out.printf("\nYour initials are: %s.%s.", firstName.charAt(0), 
-            secondName.charAt(0));
+            secondName.charAt(0)); // needs to add upperCase method
   }
 }
