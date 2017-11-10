@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    
+    public static void main(String[] args) {
+    
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter first word: ");
+        String firstWord = scan.nextLine();
+        System.out.print("Enter second word: ");
+        String secondWord = scan.nextLine();
+    
+        int charMatch = 0;
+        char[] matchingChars = new char[(firstWord.length()>secondWord.length()) ? firstWord.length() : secondWord.length()];
+        for(int i = 0; i < firstWord.length(); i++) {
+ 	        for(int j = 0; j < secondWord.length(); j++) {
+                if(firstWord.toLowerCase().charAt(i) == secondWord.toLowerCase().charAt(j)) {
+                    charMatch++;
+                    matchingChars[i] = firstWord.charAt(i);
+                }
+ 	        }
+        }
+        // it can be done through "toString(char[])" method
+        System.out.print("Matching chars are: ");
+        for (int counter = 0; counter < matchingChars.length; counter++)
+            System.out.printf ("%c ", matchingChars[counter]);
+            
+        if (charMatch >= firstWord.length())
+            System.out.println("\nThe first word is an anagram of the second word");
+        else if (charMatch >= secondWord.length()) 
+            System.out.println("\nThe second word is an anagram of the first word");
+        else
+            System.out.println("\nOne of these words is not an anagram of the another one");
+  }
+}
