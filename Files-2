@@ -1,0 +1,8 @@
+import java.util.Scanner;
+import java.io.File;
+
+class FilesList {
+  public static void main () {
+    Scanner dir = new Scanner(System.in);
+    System.out.print("Enter directory name: ");
+    contentListing
