@@ -2,7 +2,26 @@ import java.util.Scanner;
 import java.io.File;
 
 class FilesList {
-  public static void main () {
+
+  public static void main() {
     Scanner dir = new Scanner(System.in);
     System.out.print("Enter directory name: ");
-    contentListing
+    contentListing(dir.nextLine());
+  } // end main
+    
+  public static void contentListing(String path) {
+    File name = new File(path);
+    if (name.exist()) {
+      if (name.isDirectory()) {
+        String[] directory = name.list();
+        System.out.println("\nDirectory contents: \n");
+        for (String content : directory)
+          System.out.println(content);
+      }
+      else
+        System.out.printf("%s is not a directory", name);
+    } // end outer if
+    else
+      System.out.printf("%s does not exist", name);
+  } // end contentListing
+} // end class
