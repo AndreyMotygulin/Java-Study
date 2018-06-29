@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    TreeMap<Integer, String> colors = new TreeMap<> (new Sorter());
+	    
+	    //populating of the TreeMap
+	    
+	    colors.put(1, "white");
+	    colors.put(2, "red");
+	    colors.put(3, "blue");
+	   
+	    System.out.println(colors);
+    }
+    
+    //class Sorter must be static since the "main" method is static and
+    //non-static variable cannot be referenced from a static context
+    
+    static class Sorter implements Comparator<Integer> {
+        public int compare (Integer key1, Integer key2) {
+            return key1.compareTo(key2);
+        }
+    }
+}
